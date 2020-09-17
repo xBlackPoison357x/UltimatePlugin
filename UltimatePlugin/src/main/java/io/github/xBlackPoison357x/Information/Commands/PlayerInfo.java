@@ -20,28 +20,28 @@ public class PlayerInfo implements CommandExecutor {
         if (commandLabel.equalsIgnoreCase("player")) {
             if (sender.isOp() || sender.hasPermission("information.player")) {
                 if (args.length != 1) {
-                    sender.sendMessage((Object)ChatColor.RED + "Incorrect usage! Correct usage /player <playername>.");
+                    sender.sendMessage(ChatColor.RED + "Incorrect usage! Correct usage /player <playername>.");
                     return false;
                 }
                 Player targetplayer = Bukkit.getPlayer(args[0]);
                 if (targetplayer == null) {
-                    sender.sendMessage((Object)ChatColor.DARK_RED + args[0] + (Object)ChatColor.RED + " is currently not online.");
+                    sender.sendMessage(ChatColor.DARK_RED + args[0] + ChatColor.RED + " is currently not online.");
                     return true;
                 }
-                sender.sendMessage((Object)ChatColor.GOLD + "====== Player: " + (Object)ChatColor.RED + targetplayer.getName() + (Object)ChatColor.GOLD + " ======");
-                sender.sendMessage((Object)ChatColor.GOLD + " Nick: " + (Object)ChatColor.WHITE + targetplayer.getDisplayName());
-                sender.sendMessage((Object)ChatColor.GOLD + " UUID: " + (Object)ChatColor.WHITE + targetplayer.getUniqueId());
-                sender.sendMessage((Object)ChatColor.GOLD + " Health: " + (Object)ChatColor.WHITE + targetplayer.getHealth() + "/20");
-                sender.sendMessage((Object)ChatColor.GOLD + " Hunger: " + (Object)ChatColor.WHITE + targetplayer.getFoodLevel() + "/20" + " (+" + targetplayer.getSaturation() + " saturation)");
-                sender.sendMessage((Object)ChatColor.GOLD + " Exp: " + (Object)ChatColor.WHITE + targetplayer.getExp() + "(Level " + targetplayer.getLevel() + ")");
-                sender.sendMessage((Object)ChatColor.GOLD + " Location: " + (Object)ChatColor.WHITE + "(" + targetplayer.getLocation().getWorld().getName() + ", " + targetplayer.getLocation().getBlockX() + ", " + targetplayer.getLocation().getBlockY() + ", " + targetplayer.getLocation().getBlockZ() + ")");
-                sender.sendMessage((Object)ChatColor.GOLD + " IP Address: " + (Object)ChatColor.WHITE + targetplayer.getAddress());
-                sender.sendMessage((Object)ChatColor.GOLD + " Gamemode: " + (Object)ChatColor.WHITE + (Object)targetplayer.getGameMode());
-                sender.sendMessage((Object)ChatColor.GOLD + " OP: " + (Object)ChatColor.GREEN + targetplayer.isOp());
-                sender.sendMessage((Object)ChatColor.GOLD + " Fly mode: " + (Object)ChatColor.GREEN + targetplayer.isFlying());
+                sender.sendMessage(ChatColor.GOLD + "====== Player: " + ChatColor.RED + targetplayer.getName() + ChatColor.GOLD + " ======");
+                sender.sendMessage(ChatColor.GOLD + " Nick: " + ChatColor.WHITE + targetplayer.getDisplayName());
+                sender.sendMessage(ChatColor.GOLD + " UUID: " + ChatColor.WHITE + targetplayer.getUniqueId());
+                sender.sendMessage(ChatColor.GOLD + " Health: " + ChatColor.WHITE + targetplayer.getHealth() + "/20");
+                sender.sendMessage(ChatColor.GOLD + " Hunger: " + ChatColor.WHITE + targetplayer.getFoodLevel() + "/20" + " (+" + targetplayer.getSaturation() + " saturation)");
+                sender.sendMessage(ChatColor.GOLD + " Exp: " + ChatColor.WHITE + targetplayer.getExp() + "(Level " + targetplayer.getLevel() + ")");
+                sender.sendMessage(ChatColor.GOLD + " Location: " + ChatColor.WHITE + "(" + targetplayer.getLocation().getWorld().getName() + ", " + targetplayer.getLocation().getBlockX() + ", " + targetplayer.getLocation().getBlockY() + ", " + targetplayer.getLocation().getBlockZ() + ")");
+                sender.sendMessage(ChatColor.GOLD + " IP Address: " + ChatColor.WHITE + targetplayer.getAddress());
+                sender.sendMessage(ChatColor.GOLD + " Gamemode: " + ChatColor.WHITE + targetplayer.getGameMode());
+                sender.sendMessage(ChatColor.GOLD + " OP: " + ChatColor.GREEN + targetplayer.isOp());
+                sender.sendMessage(ChatColor.GOLD + " Fly mode: " + ChatColor.GREEN + targetplayer.isFlying());
                 return true;
             }
-            sender.sendMessage((Object)ChatColor.DARK_RED + this.plugin.pdfFile.getName() + (Object)ChatColor.RED + " I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
+            sender.sendMessage(ChatColor.DARK_RED + this.plugin.pdfFile.getName() + ChatColor.RED + " I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
             return false;
         }
         return false;

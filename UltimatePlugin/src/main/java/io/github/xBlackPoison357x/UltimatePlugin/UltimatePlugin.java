@@ -85,9 +85,9 @@ extends JavaPlugin {
 
     public void onEnable() {
         this.pdfFile = this.getDescription();
-        this.PREFIX = (Object)ChatColor.GREEN + "[" + this.pdfFile.getName() + "]";
-        this.console.sendMessage(String.valueOf(this.PREFIX) + (Object)ChatColor.GREEN + " UltimatePlugin version " + this.pdfFile.getVersion() + " has been enabled.");
-        this.console.sendMessage(String.valueOf(this.PREFIX) + (Object)ChatColor.GREEN + " Developed by: " + this.pdfFile.getAuthors());
+        this.PREFIX = ChatColor.GREEN + "[" + this.pdfFile.getName() + "]";
+        this.console.sendMessage(String.valueOf(this.PREFIX) + ChatColor.GREEN + " UltimatePlugin version " + this.pdfFile.getVersion() + " has been enabled.");
+        this.console.sendMessage(String.valueOf(this.PREFIX) + ChatColor.GREEN + " Developed by: " + this.pdfFile.getAuthors());
         this.createFiles();
         Crafting cr = new Crafting(this);
         cr.SetupCrafting();
@@ -309,31 +309,31 @@ extends JavaPlugin {
         Updater updater = new Updater((Plugin)this, 102168, this.getFile(), Updater.UpdateType.DEFAULT, true);
         Updater.UpdateResult result = updater.getResult();
         if (updater.getResult() == Updater.UpdateResult.SUCCESS) {
-            this.console.sendMessage((Object)ChatColor.GREEN + "Update " + updater.getLatestName() + " was found and downloaded, will be loaded on next server restart!");
+            this.console.sendMessage(ChatColor.GREEN + "Update " + updater.getLatestName() + " was found and downloaded, will be loaded on next server restart!");
         }
         if (updater.getResult() == Updater.UpdateResult.NO_UPDATE) {
-            this.console.sendMessage((Object)ChatColor.GREEN + updater.getLatestName() + " is the latest version available!");
+            this.console.sendMessage(ChatColor.GREEN + updater.getLatestName() + " is the latest version available!");
         }
         if (updater.getResult() == Updater.UpdateResult.DISABLED) {
-            this.console.sendMessage((Object)ChatColor.RED + this.pdfFile.getName() + " autoupdate is disabled in the configuration!");
+            this.console.sendMessage(ChatColor.RED + this.pdfFile.getName() + " autoupdate is disabled in the configuration!");
         }
         if (updater.getResult() == Updater.UpdateResult.FAIL_DOWNLOAD) {
-            this.console.sendMessage((Object)ChatColor.RED + this.pdfFile.getName() + " failed to download " + updater.getLatestName());
+            this.console.sendMessage(ChatColor.RED + this.pdfFile.getName() + " failed to download " + updater.getLatestName());
         }
         if (updater.getResult() == Updater.UpdateResult.FAIL_DBO) {
-            this.console.sendMessage((Object)ChatColor.RED + this.pdfFile.getName() + " updater was unable to contact DBO to download the update!");
+            this.console.sendMessage(ChatColor.RED + this.pdfFile.getName() + " updater was unable to contact DBO to download the update!");
         }
         if (updater.getResult() == Updater.UpdateResult.FAIL_NOVERSION) {
-            this.console.sendMessage((Object)ChatColor.RED + this.pdfFile.getName() + " no file version found!");
+            this.console.sendMessage(ChatColor.RED + this.pdfFile.getName() + " no file version found!");
         }
         if (updater.getResult() == Updater.UpdateResult.FAIL_BADID) {
-            this.console.sendMessage((Object)ChatColor.RED + this.pdfFile.getName() + " Invalid Plugin ID");
+            this.console.sendMessage(ChatColor.RED + this.pdfFile.getName() + " Invalid Plugin ID");
         }
         if (updater.getResult() == Updater.UpdateResult.FAIL_APIKEY) {
-            this.console.sendMessage((Object)ChatColor.RED + this.pdfFile.getName() + " Invalid Plugin API Key");
+            this.console.sendMessage(ChatColor.RED + this.pdfFile.getName() + " Invalid Plugin API Key");
         }
         if (updater.getResult() == Updater.UpdateResult.UPDATE_AVAILABLE) {
-            this.console.sendMessage((Object)ChatColor.RED + this.pdfFile.getName() + " has found update" + updater.getLatestName() + " , but it was not downloaded");
+            this.console.sendMessage(ChatColor.RED + this.pdfFile.getName() + " has found update" + updater.getLatestName() + " , but it was not downloaded");
         }
         switch (result) {
             case DISABLED: {

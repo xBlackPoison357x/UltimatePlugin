@@ -22,17 +22,17 @@ public class ItemFramePlace implements Listener {
 		if (event.getRemover() instanceof Player) {
 			Player p = (Player) event.getRemover();
 			if (event.getEntity().getType() == EntityType.ITEM_FRAME) {
-				this.plugin.getFrameProtectorConfig().set("Item Frame.Owner", (Object) p.getName());
-				this.plugin.getFrameProtectorConfig().set("Item Frame.UUID", (Object) p.getUniqueId());
+				this.plugin.getFrameProtectorConfig().set("Item Frame.Owner", p.getName());
+				this.plugin.getFrameProtectorConfig().set("Item Frame.UUID", p.getUniqueId());
 				this.plugin.getFrameProtectorConfig().set("Item Frame.loc.world",
-						(Object) event.getEntity().getLocation());
+						 event.getEntity().getLocation());
 				this.plugin.getFrameProtectorConfig().set("Item Frame.loc.x",
-						(Object) event.getEntity().getLocation().getBlockX());
+						 event.getEntity().getLocation().getBlockX());
 				this.plugin.getFrameProtectorConfig().set("Item Frame.loc.y",
-						(Object) event.getEntity().getLocation().getBlockY());
+						 event.getEntity().getLocation().getBlockY());
 				this.plugin.getFrameProtectorConfig().set("Item Frame.loc.z",
-						(Object) event.getEntity().getLocation().getBlockZ());
-				Bukkit.broadcastMessage((String) "Code Appears to be working!");
+						 event.getEntity().getLocation().getBlockZ());
+				Bukkit.broadcastMessage("Code Appears to be working!");
 				return;
 			}
 		}

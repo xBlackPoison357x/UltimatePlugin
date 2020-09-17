@@ -25,12 +25,12 @@ implements Listener {
         Player player = event.getPlayer();
         String text = plugin.getInformationConfig().getString("Boss Message.Text");
         String color2 = plugin.getInformationConfig().getString("Boss Message.Color");
-        BarColor color = BarColor.valueOf((String)color2);
+        BarColor color = BarColor.valueOf(color2);
         String style2 = plugin.getInformationConfig().getString("Boss Message.Style");
-        BarStyle style = BarStyle.valueOf((String)style2);
+        BarStyle style = BarStyle.valueOf(style2);
         String flag2 = plugin.getInformationConfig().getString("Boss Message.Flag");
-        BarFlag flag = BarFlag.valueOf((String)flag2);
-        BossBar boss = Bukkit.createBossBar((String)text, (BarColor)color, (BarStyle)style, (BarFlag[])new BarFlag[]{flag});
+        BarFlag flag = BarFlag.valueOf(flag2);
+        BossBar boss = Bukkit.createBossBar(text, (BarColor)color, (BarStyle)style, (BarFlag[])new BarFlag[]{flag});
         boss.setProgress(1.0);
         boss.addPlayer(player);
         boss.setColor(color);

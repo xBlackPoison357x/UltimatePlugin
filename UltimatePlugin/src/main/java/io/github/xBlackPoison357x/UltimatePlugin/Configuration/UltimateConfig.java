@@ -14,14 +14,14 @@ public class UltimateConfig {
     }
 
     public void setDefaultConfig(File configf) {
-        this.plugin.getDefaultConfig().set("UltimatePlugin", (Object)this.plugin.pdfFile.getVersion());
-        this.plugin.getDefaultConfig().set("autoupdate", (Object)true);
-        this.plugin.getDefaultConfig().set("Check Bukkit Compatibility", (Object)false);
-        this.plugin.getDefaultConfig().set("Enabled Plugin Components.Information", (Object)true);
-        this.plugin.getDefaultConfig().set("Enabled Plugin Components.RecipeChanger", (Object)true);
-        this.plugin.getDefaultConfig().set("Enabled Plugin Components.DisableEXP", (Object)true);
-        this.plugin.getDefaultConfig().set("Enabled Plugin Components.FrameProtector", (Object)true);
-        this.plugin.getDefaultConfig().set("Enabled Plugin Components.DisableCommands", (Object)true);
+        this.plugin.getDefaultConfig().set("UltimatePlugin", this.plugin.pdfFile.getVersion());
+        this.plugin.getDefaultConfig().set("autoupdate", true);
+        this.plugin.getDefaultConfig().set("Check Bukkit Compatibility", false);
+        this.plugin.getDefaultConfig().set("Enabled Plugin Components.Information", true);
+        this.plugin.getDefaultConfig().set("Enabled Plugin Components.RecipeChanger", true);
+        this.plugin.getDefaultConfig().set("Enabled Plugin Components.DisableEXP", true);
+        this.plugin.getDefaultConfig().set("Enabled Plugin Components.FrameProtector", true);
+        this.plugin.getDefaultConfig().set("Enabled Plugin Components.DisableCommands", true);
         try {
             this.plugin.getDefaultConfig().save(configf);
         }
@@ -31,13 +31,13 @@ public class UltimateConfig {
     }
 
     public void setDisableEXPConfig(File disableexpf) {
-        this.plugin.getDisableEXPConfig().set("EXP.Ore", (Object)false);
-        this.plugin.getDisableEXPConfig().set("EXP.Smelt", (Object)false);
-        this.plugin.getDisableEXPConfig().set("EXP.Mob", (Object)false);
-        this.plugin.getDisableEXPConfig().set("EXP.Fish", (Object)false);
-        this.plugin.getDisableEXPConfig().set("EXP.Exp Bottle", (Object)false);
-        this.plugin.getDisableEXPConfig().set("EXP.Breeding", (Object)false);
-        this.plugin.getDisableEXPConfig().set("EXP.ALL", (Object)false);
+        this.plugin.getDisableEXPConfig().set("EXP.Ore", false);
+        this.plugin.getDisableEXPConfig().set("EXP.Smelt", false);
+        this.plugin.getDisableEXPConfig().set("EXP.Mob", false);
+        this.plugin.getDisableEXPConfig().set("EXP.Fish", false);
+        this.plugin.getDisableEXPConfig().set("EXP.Exp Bottle", false);
+        this.plugin.getDisableEXPConfig().set("EXP.Breeding", false);
+        this.plugin.getDisableEXPConfig().set("EXP.ALL", false);
         try {
             this.plugin.getDisableEXPConfig().save(disableexpf);
         }
@@ -74,29 +74,29 @@ public class UltimateConfig {
         this.plugin.getInformationConfig().set("Youtube", youtube);
         this.plugin.getInformationConfig().set("Extra", extra);
         this.plugin.getInformationConfig().set("Vote", vote);
-        this.plugin.getInformationConfig().set("Disabled Flight Worlds.world", (Object)false);
-        this.plugin.getInformationConfig().set("Disabled Flight Worlds.world_nether", (Object)false);
-        this.plugin.getInformationConfig().set("Disabled Flight Worlds.world_the_end", (Object)false);
-        this.plugin.getInformationConfig().set("Disabled Creative Worlds.world", (Object)false);
-        this.plugin.getInformationConfig().set("Disabled Creative Worlds.world_nether", (Object)false);
-        this.plugin.getInformationConfig().set("Disabled Creative Worlds.world_the_end", (Object)false);
-        this.plugin.getInformationConfig().set("Disabled Join Worlds.world", (Object)false);
-        this.plugin.getInformationConfig().set("Disabled Join Worlds.world_nether", (Object)false);
-        this.plugin.getInformationConfig().set("Disabled Join Worlds.world_the_end", (Object)false);
-        this.plugin.getInformationConfig().set("Factions.Safezone Flight", (Object)false);
-        this.plugin.getInformationConfig().set("Factions.Enemy Flight", (Object)false);
-        this.plugin.getInformationConfig().set("Factions.Neutral Flight", (Object)false);
-        this.plugin.getInformationConfig().set("Factions.Truce Flight", (Object)false);
-        this.plugin.getInformationConfig().set("Factions.Ally Flight", (Object)false);
-        this.plugin.getInformationConfig().set("Factions.Wilderness Flight", (Object)false);
-        this.plugin.getInformationConfig().set("Factions.Warzone Flight", (Object)false);
-        this.plugin.getInformationConfig().set("Factions.No Safezone Damage", (Object)false);
-        this.plugin.getInformationConfig().set("Boss Message.Color", (Object)"RED");
-        this.plugin.getInformationConfig().set("Boss Message.Text", (Object)"Welcome to the Server!");
-        this.plugin.getInformationConfig().set("Boss Message.Style", (Object)"SOLID");
-        this.plugin.getInformationConfig().set("Boss Message.Flag", (Object)"DARKEN_SKY");
-        this.plugin.getInformationConfig().set("Blocktopofnetherbuilding", (Object)false);
-        this.plugin.getInformationConfig().set("Starter Kit", (Object)false);
+        this.plugin.getInformationConfig().set("Disabled Flight Worlds.world", false);
+        this.plugin.getInformationConfig().set("Disabled Flight Worlds.world_nether", false);
+        this.plugin.getInformationConfig().set("Disabled Flight Worlds.world_the_end", false);
+        this.plugin.getInformationConfig().set("Disabled Creative Worlds.world", false);
+        this.plugin.getInformationConfig().set("Disabled Creative Worlds.world_nether", false);
+        this.plugin.getInformationConfig().set("Disabled Creative Worlds.world_the_end", false);
+        this.plugin.getInformationConfig().set("Disabled Join Worlds.world", false);
+        this.plugin.getInformationConfig().set("Disabled Join Worlds.world_nether", false);
+        this.plugin.getInformationConfig().set("Disabled Join Worlds.world_the_end", false);
+        this.plugin.getInformationConfig().set("Factions.Safezone Flight", false);
+        this.plugin.getInformationConfig().set("Factions.Enemy Flight", false);
+        this.plugin.getInformationConfig().set("Factions.Neutral Flight", false);
+        this.plugin.getInformationConfig().set("Factions.Truce Flight", false);
+        this.plugin.getInformationConfig().set("Factions.Ally Flight", false);
+        this.plugin.getInformationConfig().set("Factions.Wilderness Flight", false);
+        this.plugin.getInformationConfig().set("Factions.Warzone Flight", false);
+        this.plugin.getInformationConfig().set("Factions.No Safezone Damage", false);
+        this.plugin.getInformationConfig().set("Boss Message.Color", "RED");
+        this.plugin.getInformationConfig().set("Boss Message.Text", "Welcome to the Server!");
+        this.plugin.getInformationConfig().set("Boss Message.Style", "SOLID");
+        this.plugin.getInformationConfig().set("Boss Message.Flag", "DARKEN_SKY");
+        this.plugin.getInformationConfig().set("Blocktopofnetherbuilding", false);
+        this.plugin.getInformationConfig().set("Starter Kit", false);
         try {
             this.plugin.getInformationConfig().save(informationf);
         }
@@ -106,56 +106,56 @@ public class UltimateConfig {
     }
 
     public void setRecipeChangerConfig(File recipechangerf) {
-        this.plugin.getRecipeChangerConfig().set("Horse Armor.Iron", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Horse Armor.Gold", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Horse Armor.Diamond", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Chain Armor.Helmet", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Chain Armor.ChestPiece", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Chain Armor.Leggings", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Chain Armor.Boots", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Bat", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Chicken", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Cow", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Horse", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Mooshroom", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Ocelot", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Pig", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Sheep", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Squid", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Wolf", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.stal", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.11", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.far", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.ward", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.13", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.cat", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.blocks", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.mellohi", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.chirp", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.strad", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Music Discs.mall", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Name Tag", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Saddle", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Grass Block", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Obsidian", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Grass", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Ice", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Fire", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Bottle o Enchanting", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Sponge", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Bedrock", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Dragon Egg", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Gunpowder", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Monster Spawner", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Command Block", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Podzol", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Double Tallgrass", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Packed Ice", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Leather", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Cocoa Beans", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Misc.Shulker Shell", (Object)false);
-        this.plugin.getRecipeChangerConfig().set("Messages.Permission Granted", (Object)"You have permission to craft this item!");
-        this.plugin.getRecipeChangerConfig().set("Messages.Permission Denied", (Object)"I'm sorry, but you do not have permission to craft this item. Please contact the server administrators if you believe that this is in error.");
+        this.plugin.getRecipeChangerConfig().set("Horse Armor.Iron", false);
+        this.plugin.getRecipeChangerConfig().set("Horse Armor.Gold", false);
+        this.plugin.getRecipeChangerConfig().set("Horse Armor.Diamond", false);
+        this.plugin.getRecipeChangerConfig().set("Chain Armor.Helmet", false);
+        this.plugin.getRecipeChangerConfig().set("Chain Armor.ChestPiece", false);
+        this.plugin.getRecipeChangerConfig().set("Chain Armor.Leggings", false);
+        this.plugin.getRecipeChangerConfig().set("Chain Armor.Boots", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Bat", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Chicken", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Cow", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Horse", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Mooshroom", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Ocelot", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Pig", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Sheep", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Squid", false);
+        this.plugin.getRecipeChangerConfig().set("Spawn Eggs.Wolf", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.stal", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.11", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.far", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.ward", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.13", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.cat", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.blocks", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.mellohi", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.chirp", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.strad", false);
+        this.plugin.getRecipeChangerConfig().set("Music Discs.mall", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Name Tag", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Saddle", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Grass Block", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Obsidian", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Grass", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Ice", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Fire", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Bottle o Enchanting", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Sponge", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Bedrock", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Dragon Egg", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Gunpowder", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Monster Spawner", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Command Block", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Podzol", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Double Tallgrass", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Packed Ice", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Leather", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Cocoa Beans", false);
+        this.plugin.getRecipeChangerConfig().set("Misc.Shulker Shell", false);
+        this.plugin.getRecipeChangerConfig().set("Messages.Permission Granted", "You have permission to craft this item!");
+        this.plugin.getRecipeChangerConfig().set("Messages.Permission Denied", "I'm sorry, but you do not have permission to craft this item. Please contact the server administrators if you believe that this is in error.");
         try {
             this.plugin.getRecipeChangerConfig().save(recipechangerf);
         }
@@ -165,10 +165,10 @@ public class UltimateConfig {
     }
 
     public void setDisableCommandMessagesConfig(File disablecommandmessagesf) {
-        this.plugin.getDisableCommandMessagesConfig().set("Messages.Command Deny Message", (Object)"That Command is not allowed");
-        this.plugin.getDisableCommandMessagesConfig().set("Messages.Permission Deny Message", (Object)"I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
-        this.plugin.getDisableCommandMessagesConfig().set("Messages.Already Forbidden Message", (Object)"That command is already forbidden!");
-        this.plugin.getDisableCommandMessagesConfig().set("Messages.Not Forbiddien Message", (Object)"That command is not forbidden!");
+        this.plugin.getDisableCommandMessagesConfig().set("Messages.Command Deny Message", "That Command is not allowed");
+        this.plugin.getDisableCommandMessagesConfig().set("Messages.Permission Deny Message", "I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
+        this.plugin.getDisableCommandMessagesConfig().set("Messages.Already Forbidden Message", "That command is already forbidden!");
+        this.plugin.getDisableCommandMessagesConfig().set("Messages.Not Forbiddien Message", "That command is not forbidden!");
         try {
             this.plugin.getDisableCommandMessagesConfig().save(disablecommandmessagesf);
         }
@@ -178,12 +178,12 @@ public class UltimateConfig {
     }
 
     public void setFrameProtectorConfig(File frameprotectorf) {
-        this.plugin.getFrameProtectorConfig().set("Messages.Enable", (Object)true);
-        this.plugin.getFrameProtectorConfig().set("Messages.Remove Frame Deny Message", (Object)"You are not allowed to remove this ItemFrame!");
-        this.plugin.getFrameProtectorConfig().set("Messages.Place Deny Message", (Object)"You are not allowed to place this ItemFrame!");
-        this.plugin.getFrameProtectorConfig().set("Messages.Rotate Deny Message", (Object)"You are not allowed to rotate this ItemFrame!");
-        this.plugin.getFrameProtectorConfig().set("Messages.Remove Item Deny Message", (Object)"You are not allowed to remove items from this ItemFrame!");
-        this.plugin.getFrameProtectorConfig().set("Messages.Command Deny Message", (Object)"I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
+        this.plugin.getFrameProtectorConfig().set("Messages.Enable", true);
+        this.plugin.getFrameProtectorConfig().set("Messages.Remove Frame Deny Message", "You are not allowed to remove this ItemFrame!");
+        this.plugin.getFrameProtectorConfig().set("Messages.Place Deny Message", "You are not allowed to place this ItemFrame!");
+        this.plugin.getFrameProtectorConfig().set("Messages.Rotate Deny Message", "You are not allowed to rotate this ItemFrame!");
+        this.plugin.getFrameProtectorConfig().set("Messages.Remove Item Deny Message", "You are not allowed to remove items from this ItemFrame!");
+        this.plugin.getFrameProtectorConfig().set("Messages.Command Deny Message", "I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
         try {
             this.plugin.getFrameProtectorConfig().save(frameprotectorf);
         }

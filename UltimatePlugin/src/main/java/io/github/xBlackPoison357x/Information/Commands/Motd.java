@@ -21,10 +21,10 @@ implements CommandExecutor {
             // empty if block
         }
         if (sender.isOp() || sender.hasPermission("information.motd")) {
-            sender.sendMessage((Object)ChatColor.DARK_RED + this.plugin.pdfFile.getName() + (Object)ChatColor.YELLOW + Bukkit.getMotd().toString());
+            sender.sendMessage(ChatColor.DARK_RED + this.plugin.pdfFile.getName() + ChatColor.YELLOW + Bukkit.getMotd().toString());
             return true;
         }
-        sender.sendMessage((Object)ChatColor.DARK_RED + this.plugin.pdfFile.getName() + (Object)ChatColor.RED + " I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
+        sender.sendMessage(ChatColor.DARK_RED + this.plugin.pdfFile.getName() + ChatColor.RED + " I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
         return true;
     }
 }

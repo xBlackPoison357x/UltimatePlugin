@@ -22,13 +22,13 @@ implements Listener {
     @EventHandler(priority=EventPriority.HIGHEST)
     public void onPlayerMove(PlayerMoveEvent event) {
         Location playerLoc = event.getPlayer().getLocation();
-        World world = Bukkit.getWorld((String)"world");
+        World world = Bukkit.getWorld("world");
         Location loc = world.getSpawnLocation();
         String pname = event.getPlayer().getName();
         if (this.plugin.getInformationConfig().getBoolean("Blocktopofnetherbuilding") && (!event.getPlayer().isOp() || !event.getPlayer().hasPermission("information.netherbuildbypass")) && event.getPlayer().getWorld().getName().endsWith("nether") && playerLoc.getY() == 128.0) {
             event.getPlayer().teleport(loc);
-            event.getPlayer().sendMessage((Object)ChatColor.DARK_RED + "You are not allowed to walk/build on top of nether!");
-            Bukkit.broadcast((String)((Object)ChatColor.RED + pname + " attempted to walk/build on top of nether."), (String)"information.netherbuild.notify");
+            event.getPlayer().sendMessage(ChatColor.DARK_RED + "You are not allowed to walk/build on top of nether!");
+            Bukkit.broadcast((ChatColor.RED + pname + " attempted to walk/build on top of nether."), "information.netherbuild.notify");
         }
     }
 }

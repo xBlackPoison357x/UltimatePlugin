@@ -378,9 +378,9 @@ public class Crafting implements Listener {
             bluedisc.setIngredient('C', Material.PURPLE_DYE);
             Bukkit.addRecipe(bluedisc);
         }
-        if (this.plugin.getRecipeChangerConfig().getBoolean("Shulker Shell")) {
+        if (this.plugin.getRecipeChangerConfig().getBoolean("Misc.Shulker Shell")) {
             ShapedRecipe shulker = new ShapedRecipe(new NamespacedKey(this.plugin, "SHULKER_SHELL"), (new ItemStack(Material.SHULKER_SHELL)));
-            shulker.shape(new String[]{"AAA", "ANA", "NNN"});
+            shulker.shape(new String[]{"NNN", "AAA", "ANA"});
             shulker.setIngredient('A', Material.OBSIDIAN);
             Bukkit.addRecipe(shulker);
         }

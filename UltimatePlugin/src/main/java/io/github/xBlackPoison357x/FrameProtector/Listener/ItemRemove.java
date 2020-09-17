@@ -32,7 +32,7 @@ public class ItemRemove implements Listener {
 			if (event.getEntity().getType() == EntityType.ITEM_FRAME && !p.isOp() || !p.hasPermission("frame.remove")) {
 				event.setCancelled(true);
 				if (this.plugin.getFrameProtectorConfig().getBoolean("Messages.Enable")) {
-					p.sendMessage((Object) ChatColor.DARK_RED + msg1);
+					p.sendMessage(ChatColor.DARK_RED + msg1);
 					return;
 				}
 			}
@@ -49,7 +49,7 @@ public class ItemRemove implements Listener {
 		if (!p.isOp() && !p.hasPermission("frame.place")) {
 			event.setCancelled(true);
 			if (this.plugin.getFrameProtectorConfig().getBoolean("Messages.Enable")) {
-				p.sendMessage((Object) ChatColor.DARK_RED + msg2);
+				p.sendMessage(ChatColor.DARK_RED + msg2);
 				return;
 			}
 		}
@@ -60,17 +60,17 @@ public class ItemRemove implements Listener {
 		String msg3 = this.plugin.getFrameProtectorConfig().getString("Messages.Rotate Deny Message");
 		Entity entity = event.getRightClicked();
 		Player player = event.getPlayer();
-		if (!entity.getType().equals((Object) EntityType.ITEM_FRAME)) {
+		if (!entity.getType().equals( EntityType.ITEM_FRAME)) {
 			return;
 		}
 		ItemFrame iFrame = (ItemFrame) entity;
-		if (iFrame.getItem().equals(null) || iFrame.getItem().getType().equals((Object) Material.AIR)) {
+		if (iFrame.getItem().equals(null) || iFrame.getItem().getType().equals( Material.AIR)) {
 			return;
 		}
 		if (!player.isOp() && !player.hasPermission("frame.rotate")) {
 			event.setCancelled(true);
 			if (this.plugin.getFrameProtectorConfig().getBoolean("Messages.Enable")) {
-				player.sendMessage((Object) ChatColor.DARK_RED + msg3);
+				player.sendMessage(ChatColor.DARK_RED + msg3);
 			}
 		}
 	}
@@ -85,7 +85,7 @@ public class ItemRemove implements Listener {
 					&& !p.hasPermission("frame.item.remove")) {
 				e.setCancelled(true);
 				if (this.plugin.getFrameProtectorConfig().getBoolean("Messages.Enable")) {
-					p.sendMessage((Object) ChatColor.DARK_RED + msg4);
+					p.sendMessage(ChatColor.DARK_RED + msg4);
 				}
 			}
 		}
@@ -93,7 +93,7 @@ public class ItemRemove implements Listener {
 				&& !(p.getPlayer().isOp()) && !p.hasPermission("frame.item.remove")) {
 			e.setCancelled(true);
 			if (this.plugin.getFrameProtectorConfig().getBoolean("Messages.Enable")) {
-				p.sendMessage((Object) ChatColor.DARK_RED + msg4);
+				p.sendMessage(ChatColor.DARK_RED + msg4);
 			}
 		}
 	}

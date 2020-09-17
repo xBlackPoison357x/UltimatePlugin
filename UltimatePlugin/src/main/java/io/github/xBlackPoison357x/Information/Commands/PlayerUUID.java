@@ -20,20 +20,21 @@ public class PlayerUUID implements CommandExecutor {
         if (commandLabel.equalsIgnoreCase("uuid")) {
             if (sender.isOp() || sender.hasPermission("information.uuid")) {
                 if (args.length != 1) {
-                    sender.sendMessage((Object)ChatColor.RED + "Incorrect usage! Correct usage /uuid <playername>.");
+                    sender.sendMessage(ChatColor.RED + "Incorrect usage! Correct usage /uuid <playername>.");
                     return false;
                 }
-                OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(args[0]);
+                @SuppressWarnings("deprecation")
+				OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(args[0]);
                 
                 if (!offlinePlayer.equals(null)) {
-                    sender.sendMessage((Object)ChatColor.GOLD + args[0] + " UUID: " + (Object)ChatColor.WHITE + offlinePlayer.getUniqueId());
+                    sender.sendMessage(ChatColor.GOLD + args[0] + " UUID: " + ChatColor.WHITE + offlinePlayer.getUniqueId());
                 }
                 return true;
             }
-            sender.sendMessage((Object)ChatColor.RED + args[0] + " does not exist, check your spelling and try again!");
+            sender.sendMessage(ChatColor.RED + args[0] + " does not exist, check your spelling and try again!");
             return false;
         }
-        sender.sendMessage((Object)ChatColor.DARK_RED + this.plugin.pdfFile.getName() + (Object)ChatColor.RED + " I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
+        sender.sendMessage(ChatColor.DARK_RED + this.plugin.pdfFile.getName() + ChatColor.RED + " I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
         return false;
     }
 }

@@ -26,7 +26,7 @@ public class CommandBlock implements Listener {
                 if (!command.contains(forbiddenCommand)) continue;
                 event.setCancelled(true);
                 String msg = this.plugin.getConfig().getString("Messages.Command Deny Message");
-                event.getPlayer().sendMessage((Object)ChatColor.RED + msg);
+                event.getPlayer().sendMessage(ChatColor.RED + msg);
                 break;
             }
         }

@@ -23,13 +23,13 @@ implements CommandExecutor {
         }
         if (sender.isOp() || sender.hasPermission("information.facebook")) {
             List<String> Facebook2 = this.plugin.getInformationConfig().getStringList("Facebook");
-            sender.sendMessage((Object)ChatColor.DARK_BLUE + "--Facebook Link(s)--");
+            sender.sendMessage(ChatColor.DARK_BLUE + "--Facebook Link(s)--");
             for (String Facebook1 : Facebook2) {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes((char)'&', (String)Facebook1));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes((char)'&', Facebook1));
             }
             return true;
         }
-        sender.sendMessage((Object)ChatColor.DARK_RED + this.plugin.pdfFile.getName() + (Object)ChatColor.RED + "I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
+        sender.sendMessage(ChatColor.DARK_RED + this.plugin.pdfFile.getName() + ChatColor.RED + "I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
         return true;
     }
 }

@@ -21,17 +21,17 @@ implements Listener {
         if (this.plugin.getInformationConfig().getBoolean("Disabled Flight Worlds.world_the_end") && (!event.getPlayer().isOp() || !event.getPlayer().hasPermission("information.flightbypass.end")) && event.getPlayer().getWorld().getName().endsWith("end") && event.getPlayer().isFlying()) {
             event.getPlayer().setAllowFlight(false);
             event.getPlayer().setFlying(false);
-            event.getPlayer().sendMessage((Object)ChatColor.RED + "You are not allowed to fly in this world!");
+            event.getPlayer().sendMessage(ChatColor.RED + "You are not allowed to fly in this world!");
         }
         if (this.plugin.getInformationConfig().getBoolean("Disabled Flight Worlds.world_nether") && (!event.getPlayer().isOp() || !event.getPlayer().hasPermission("information.flightbypass.nether")) && event.getPlayer().getWorld().getName().endsWith("nether") && event.getPlayer().isFlying()) {
             event.getPlayer().setAllowFlight(false);
             event.getPlayer().setFlying(false);
-            event.getPlayer().sendMessage((Object)ChatColor.RED + "You are not allowed to fly in this world!");
+            event.getPlayer().sendMessage(ChatColor.RED + "You are not allowed to fly in this world!");
         }
         if (this.plugin.getInformationConfig().getBoolean("Disabled Flight Worlds.world") && (!event.getPlayer().isOp() || !event.getPlayer().hasPermission("information.flightbypass.world")) && event.getPlayer().getWorld().getName().endsWith("world") && event.getPlayer().isFlying()) {
             event.getPlayer().setAllowFlight(false);
             event.getPlayer().setFlying(false);
-            event.getPlayer().sendMessage((Object)ChatColor.RED + "You are not allowed to fly in this world!");
+            event.getPlayer().sendMessage(ChatColor.RED + "You are not allowed to fly in this world!");
         }
     }
 }
