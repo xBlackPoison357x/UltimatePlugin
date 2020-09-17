@@ -9,8 +9,7 @@ import org.bukkit.entity.Player;
 
 import io.github.xBlackPoison357x.UltimatePlugin.UltimatePlugin;
 
-public class PlayerInfo
-implements CommandExecutor {
+public class PlayerInfo implements CommandExecutor {
     private UltimatePlugin plugin;
 
     public PlayerInfo(UltimatePlugin instance) {
@@ -24,7 +23,7 @@ implements CommandExecutor {
                     sender.sendMessage((Object)ChatColor.RED + "Incorrect usage! Correct usage /player <playername>.");
                     return false;
                 }
-                Player targetplayer = Bukkit.getServer().getPlayer(args[0]);
+                Player targetplayer = Bukkit.getPlayer(args[0]);
                 if (targetplayer == null) {
                     sender.sendMessage((Object)ChatColor.DARK_RED + args[0] + (Object)ChatColor.RED + " is currently not online.");
                     return true;

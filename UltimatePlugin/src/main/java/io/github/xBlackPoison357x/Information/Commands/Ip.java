@@ -17,7 +17,7 @@ implements CommandExecutor {
             // empty if block
         }
         if (sender.isOp() || sender.hasPermission("information.ip")) {
-            sender.sendMessage(Bukkit.getServer().getIp().toString());
+            sender.sendMessage(Bukkit.getIp().toString());
         }
         return false;
     }

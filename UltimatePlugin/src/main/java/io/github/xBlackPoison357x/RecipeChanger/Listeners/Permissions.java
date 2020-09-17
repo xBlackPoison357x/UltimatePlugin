@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.CraftItemEvent;
-import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.xBlackPoison357x.UltimatePlugin.UltimatePlugin;
@@ -21,10 +20,9 @@ implements Listener {
 
     @EventHandler
     public void permission(CraftItemEvent e) {
-        e.getSlotType().equals(InventoryType.SlotType.RESULT);
         Player player = (Player)e.getWhoClicked();
-        String craft = ChatColor.GREEN + this.plugin.getConfig().getString("Messages.Permission Granted");
-        String nocraft = ChatColor.RED + this.plugin.getConfig().getString("Messages.Permission Denied");
+        String craft = ChatColor.GREEN + this.plugin.getRecipeChangerConfig().getString("Messages.Permission Granted");
+        String nocraft = ChatColor.RED + this.plugin.getRecipeChangerConfig().getString("Messages.Permission Denied");
         ItemStack saddle = new ItemStack(Material.SADDLE);
         ItemStack diamondhorse = new ItemStack(Material.DIAMOND_HORSE_ARMOR);
         ItemStack goldhorse = new ItemStack(Material.GOLDEN_HORSE_ARMOR);

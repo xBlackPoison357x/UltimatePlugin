@@ -9,8 +9,7 @@ import org.bukkit.command.CommandSender;
 
 import io.github.xBlackPoison357x.UltimatePlugin.UltimatePlugin;
 
-public class PlayerUUID
-implements CommandExecutor {
+public class PlayerUUID implements CommandExecutor {
     private UltimatePlugin plugin;
 
     public PlayerUUID(UltimatePlugin instance) {

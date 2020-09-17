@@ -1,7 +1,7 @@
 name: UltimatePlugin
 version: 0.7
 author: BlackPoison357
-main: io.github.lst96.UltimatePlugin.UltimatePlugin
+main: io.github.xBlackPoison357x.UltimatePlugin.UltimatePlugin
 api-version: 1.16
 softdepend: []
 commands:
