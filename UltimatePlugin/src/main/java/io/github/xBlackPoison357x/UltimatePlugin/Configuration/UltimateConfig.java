@@ -83,14 +83,6 @@ public class UltimateConfig {
         this.plugin.getInformationConfig().set("Disabled Join Worlds.world", false);
         this.plugin.getInformationConfig().set("Disabled Join Worlds.world_nether", false);
         this.plugin.getInformationConfig().set("Disabled Join Worlds.world_the_end", false);
-        this.plugin.getInformationConfig().set("Factions.Safezone Flight", false);
-        this.plugin.getInformationConfig().set("Factions.Enemy Flight", false);
-        this.plugin.getInformationConfig().set("Factions.Neutral Flight", false);
-        this.plugin.getInformationConfig().set("Factions.Truce Flight", false);
-        this.plugin.getInformationConfig().set("Factions.Ally Flight", false);
-        this.plugin.getInformationConfig().set("Factions.Wilderness Flight", false);
-        this.plugin.getInformationConfig().set("Factions.Warzone Flight", false);
-        this.plugin.getInformationConfig().set("Factions.No Safezone Damage", false);
         this.plugin.getInformationConfig().set("Boss Message.Color", "RED");
         this.plugin.getInformationConfig().set("Boss Message.Text", "Welcome to the Server!");
         this.plugin.getInformationConfig().set("Boss Message.Style", "SOLID");
